@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const randomRoute = require('./routes/random');
+const lions  = require('./controllers/lions');
+app.use('/lions', lions);
 app.use('/random', randomRoute);
 app.use(cors())
 app.use(express.json());
